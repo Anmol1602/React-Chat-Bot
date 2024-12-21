@@ -1,0 +1,140 @@
+.chatbot-container {
+  max-width: fit-content;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70vh;
+  /* Adjust height to fit the chatbot and buttons */
+}
+
+.bot-message-box {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.user-message-box {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Hide the chat button (the button that opens the chatbot) */
+.react-chatbot-kit-chat-input-container {
+  display: none;
+}
+
+.react-chatbot-kit-chat-inner-container {
+  border: grey 1px solid;
+  border-radius: 10px;
+}
+
+.react-chatbot-kit-chat-message-container {
+  border: none;
+}
+
+.react-chatbot-kit-chat-header {
+  border-bottom: 1px solid grey;
+}
+
+.react-chatbot-kit-chat-container {
+  align-self: center;
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+/* Light Mode Styles */
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.chatbot-container.light {
+  background-color: #f1f1f1;
+}
+
+/* Dark Mode Styles */
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.chatbot-container.dark {
+  background-color: #333333;
+}
+
+.chatbot-container.dark .bot-message-box {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+.chatbot-container.dark .link-list-item-url {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* App container to ensure footer stays at the bottom */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Main content flex-grow to push footer */
+.content {
+  flex: 1;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Unified Button Styles */
+.button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 48%;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #d45c00;
+}
+
+/* Chatbot Footer for Buttons */
+.chatbot-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+/* Close chat button specific styling (inherits from .button) */
+.close-chat-button {
+  background-color: #ff4d4d;
+}
+
+.close-chat-button:hover {
+  background-color: #e60000;
+}

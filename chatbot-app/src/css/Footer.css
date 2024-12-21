@@ -1,0 +1,46 @@
+/* Footer Styling */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    /* Add padding for balance */
+    text-align: center;
+    margin-top: auto;
+    /* Ensure footer sticks to the bottom */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-logo {
+    width: 100px;
+    /* Increased size for better visibility */
+    height: 100px;
+    /* Maintain aspect ratio */
+    /* Adjust spacing below the logo */
+    background: transparent;
+    /* Ensure no background for logo */
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    /* Slightly increase font size */
+}
+
+.footer-content a {
+    color: #4caf50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    /* Smooth transition for hover */
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+    color: #66bb6a;
+    /* Slightly lighter green for hover effect */
+}
