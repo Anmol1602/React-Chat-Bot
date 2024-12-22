@@ -8,7 +8,7 @@ function Footer() {
                 <img src={logo} alt="Chatbot Logo" className="footer-logo" />
                 <p>&copy; {new Date().getFullYear()} Chatbot Application. All Rights Reserved.</p>
                 <p>
-                    Built with ❤️ by <a href="/team" target="_blank" rel="noopener noreferrer">Our Team</a>.
+                    Built with ❤️ by <a href="/team"  rel="noopener noreferrer">Our Team</a>.
                 </p>
             </div>
         </footer>

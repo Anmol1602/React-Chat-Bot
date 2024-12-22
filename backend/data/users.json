@@ -4,7 +4,9 @@
     "email": "anmol.varshney@gupshup.io",
     "password": "Anmol123@",
     "phone": "6395930109",
-    "address": "Kormangla bangalore  Karnataka India"
+    "address": "Kormangla bangalore  Karnataka India",
+    "subscription": "year",
+    "subscriptionExpiry": "2025-12-22T15:26:08.234Z"
   },
   {
     "name": "anmol.varshney",

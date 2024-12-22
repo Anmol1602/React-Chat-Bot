@@ -11,6 +11,7 @@ import LoginPage from "./Component/LogInPage"; // Import LoginPage
 import UserProfile from "./Component/UserProfile"; // Import UserProfile
 import TeamPage from "./Component/TeamPage"; // Import TeamPage
 import ThemeProvider, { useTheme } from "./Component/ThemeContext"; // Import useTheme
+import PricingPage from "./Component/PricingPage";
 import "./App.css";
 
 function App() {
@@ -38,7 +39,9 @@ function App() {
             <Route path="/signup" element={<SignUpPage setUser={setUser} />} />
             <Route path="/login" element={<LoginPage setUser={setUser} />} />
             <Route path="/profile" element={<UserProfile user={user} setUser={setUser} />} />
-            <Route path="/team" element={<TeamPage />} /> {/* Add new route for Team Page */}
+            <Route path="/team" element={<TeamPage />} /> 
+            <Route path="/pricing" element={<PricingPage user={user} setUser={setUser} />} />
+
           </Routes>
         </main>
 

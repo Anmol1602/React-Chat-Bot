@@ -42,8 +42,8 @@ function UserProfile({ user, setUser }) {
         navigate("/");
         alert("Logged out successfully!");
     };
-    
-   // redirect to landing page
+
+    // Redirect to the landing page if the user is not logged in
     if (!user) {
         navigate("/");
     }
@@ -87,6 +87,24 @@ function UserProfile({ user, setUser }) {
                             name="address"
                             value={updatedProfile.address || profile.address || ""}
                             onChange={handleChange}
+                        />
+                    </label>
+                    <label>
+                        Subscription:
+                        <input
+                            type="text"
+                            name="subscription"
+                            value={profile.subscription === 'year' ? '1-Year Subscription' : 'Free (1-Day)'}
+                            disabled
+                        />
+                    </label>
+                    <label>
+                        Subscription Expiry:
+                        <input
+                            type="text"
+                            name="subscriptionExpiry"
+                            value={profile.subscriptionExpiry ? new Date(profile.subscriptionExpiry).toLocaleDateString() : 'N/A'}
+                            disabled
                         />
                     </label>
                     <button onClick={handleSave}>Save Changes</button>

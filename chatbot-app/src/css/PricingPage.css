@@ -1,0 +1,49 @@
+/* PricingPage.css */
+.pricing-page {
+    text-align: center;
+    padding: 20px;
+}
+
+.pricing-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pricing-option {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.pricing-option.selected {
+    background-color: #f1f1f1;
+    border-color: #00aaff;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    padding: 8px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.hover-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}

@@ -35,6 +35,9 @@ function Navbar({ user, setUser }) {
                     <li className="navbar-item">
                         <Link to="/contact" className="navbar-link">Contact</Link>
                     </li>
+                    <li className="navbar-item">
+                        <Link to="/pricing" className="navbar-link">Pricing</Link>
+                    </li>
                     {!user ? (
                         <>
                             <li className="navbar-item">
