@@ -8,6 +8,7 @@ import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
 import SignUpPage from "./Component/SignUpPage"; // Import SignUpPage
 import LoginPage from "./Component/LoginPage"; // Import LoginPage
+import UserProfile from "./Component/UserProfile"; // Import UserProfile
 import ThemeProvider, { useTheme } from "./Component/ThemeContext"; // Import useTheme
 import "./App.css";
 
@@ -33,8 +34,10 @@ function App() {
             <Route path="/chatbot" element={<ChatbotComponent />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/signup" element={<SignUpPage setUser={setUser} />} /> {/* Route for SignUp */}
-            <Route path="/login" element={<LoginPage setUser={setUser} />} /> {/* Route for Login */}
+            <Route path="/signup" element={<SignUpPage setUser={setUser} />} /> 
+            <Route path="/login" element={<LoginPage setUser={setUser} />} /> 
+            <Route path="/profile" element={<UserProfile user={user} setUser={setUser} />} />
+
           </Routes>
         </main>
 

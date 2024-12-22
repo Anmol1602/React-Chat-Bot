@@ -24,10 +24,14 @@
 }
 
 .navbar-links {
-    display: flex; /* Align links horizontally */
-    align-items: center; /* Center links vertically */
-    justify-content: center; /* Center within available space */
-    flex-grow: 1; /* Let it stretch to fill the space between logo and other items */
+    display: flex;
+    /* Align links horizontally */
+    align-items: center;
+    /* Center links vertically */
+    justify-content: center;
+    /* Center within available space */
+    flex-grow: 1;
+    /* Let it stretch to fill the space between logo and other items */
 }
 
 .navbar-list {
@@ -55,13 +59,52 @@
 
 .navbar-link:hover {
     color: #4caf50;
-    text-shadow: 0 0 5px rgba(76, 175, 80, 0.7);
     transform: scale(1.05);
 }
 
 .navbar-link:focus {
     outline: none;
     border-bottom: 2px solid #4caf50;
+}
+
+/* Fix hover for logout button */
+.navbar-item button.navbar-link:hover {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.navbar-item button.navbar-link {
+    background: none;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar-item button.navbar-link:focus {
+    outline: none;
+    border-bottom: 2px solid #4caf50;
+}
+
+.navbar-item {
+    display: flex;
+    align-items: center;
+    /* Vertically center the content */
+}
+
+.navbar-link svg {
+    margin-left: 10px;
+    color: #ffffff;
+    transition: color 0.3s;
+    vertical-align: middle;
+    /* Ensure the icon is aligned with text */
 }
 
 @media (max-width: 768px) {
@@ -72,12 +115,15 @@
     }
 
     .navbar-links {
-        width: 100%; /* Take up the full width */
-        justify-content: flex-start; /* Align links to the left */
+        width: 100%;
+        /* Take up the full width */
+        justify-content: flex-start;
+        /* Align links to the left */
     }
 
     .navbar-list {
-        flex-direction: column; /* Stack links vertically */
+        flex-direction: column;
+        /* Stack links vertically */
         gap: 20px;
     }
 

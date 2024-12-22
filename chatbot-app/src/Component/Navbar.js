@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom for navigation
-import "../css/Navbar.css"; // Import the CSS file for the navbar styles
-import logo from "../assets/Logo.webp"; // Update with your logo file path
+import { Link } from "react-router-dom";
+import "../css/Navbar.css";
+import logo from "../assets/Logo.webp"; // Replace with your logo file path
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 function Navbar({ user, setUser }) {
     const handleLogout = () => {
@@ -35,9 +36,18 @@ function Navbar({ user, setUser }) {
                             </li>
                         </>
                     ) : (
-                        <li className="navbar-item">
-                            <button className="navbar-link" onClick={handleLogout}>Logout</button>
-                        </li>
+                        <>
+                            <li className="navbar-item">
+                                <Link to="/profile" className="navbar-link">
+                                    <AccountCircleIcon style={{ fontSize: "30px" }} />
+                                </Link>
+                            </li>
+                            <li className="navbar-item">
+                                <button className="navbar-link" onClick={handleLogout}>
+                                    Logout
+                                </button>
+                            </li>
+                        </>
                     )}
                 </ul>
             </div>
