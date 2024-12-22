@@ -9,6 +9,7 @@ import Footer from "./Component/Footer";
 import SignUpPage from "./Component/SignUpPage"; // Import SignUpPage
 import LoginPage from "./Component/LogInPage"; // Import LoginPage
 import UserProfile from "./Component/UserProfile"; // Import UserProfile
+import TeamPage from "./Component/TeamPage"; // Import TeamPage
 import ThemeProvider, { useTheme } from "./Component/ThemeContext"; // Import useTheme
 import "./App.css";
 
@@ -34,10 +35,10 @@ function App() {
             <Route path="/chatbot" element={<ChatbotComponent />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/signup" element={<SignUpPage setUser={setUser} />} /> 
-            <Route path="/login" element={<LoginPage setUser={setUser} />} /> 
+            <Route path="/signup" element={<SignUpPage setUser={setUser} />} />
+            <Route path="/login" element={<LoginPage setUser={setUser} />} />
             <Route path="/profile" element={<UserProfile user={user} setUser={setUser} />} />
-
+            <Route path="/team" element={<TeamPage />} /> {/* Add new route for Team Page */}
           </Routes>
         </main>
 

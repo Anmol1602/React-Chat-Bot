@@ -32,8 +32,6 @@ ensureDirectoryExists_user(path.dirname(DATA_FILE_USER));
 ensureDirectoryExists(path.dirname(DATA_FILE));
 
 // Signup endpoint
-// Signup endpoint
-// amazonq-ignore-next-line
 app.post('/signup', (req, res) => {
     const { name, email, password } = req.body;
     if (!name || !email || !password) {

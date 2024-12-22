@@ -1,0 +1,29 @@
+/* TeamPage.css */
+.team-page {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-member {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.team-member h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #555;
+}

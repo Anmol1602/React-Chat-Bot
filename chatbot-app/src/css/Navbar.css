@@ -96,7 +96,6 @@
 .navbar-item {
     display: flex;
     align-items: center;
-    /* Vertically center the content */
 }
 
 .navbar-link svg {
@@ -104,9 +103,11 @@
     color: #ffffff;
     transition: color 0.3s;
     vertical-align: middle;
-    /* Ensure the icon is aligned with text */
 }
 
+.navbar-link:hover svg {
+    color: #4caf50;
+}
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
