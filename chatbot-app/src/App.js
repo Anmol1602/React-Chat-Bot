@@ -7,7 +7,7 @@ import ContactPage from "./Component/ContactPage";
 import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
 import SignUpPage from "./Component/SignUpPage"; // Import SignUpPage
-import LoginPage from "./Component/LoginPage"; // Import LoginPage
+import LoginPage from "./Component/LogInPage"; // Import LoginPage
 import UserProfile from "./Component/UserProfile"; // Import UserProfile
 import ThemeProvider, { useTheme } from "./Component/ThemeContext"; // Import useTheme
 import "./App.css";
