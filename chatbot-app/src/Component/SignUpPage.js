@@ -23,6 +23,7 @@ function SignUpPage({ setUser }) { // Receive setUser as prop
 
             if (response.ok) {
                 const user = await response.json(); // Get the user data returned by the server
+                localStorage.setItem('user', JSON.stringify(user)); // Store user in localStorage
                 setUser(user); // Set the logged-in user
                 alert('User registered and logged in successfully!');
                 setFormData({ name: '', email: '', password: '' }); // Clear form

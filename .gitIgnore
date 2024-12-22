@@ -1,0 +1,57 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Production build
+/build
+/dist
+
+# Environment variables - to protect API keys, bot tokens, etc.
+.env
+.env.local
+.env.development
+.env.production
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+debug.log
+
+# Optional
+/coverage
+.eslintcache
+
+# Chatbot specific
+# Add any bot training data you don't want to track
+/training-data/private
+# Ignore any downloaded model files if you're using local ML models
+*.model
+/models
+
+# If you're using socket.io
+/socket-logs
+
+# If you're storing conversation logs locally
+/chat-logs
+/conversation-history
+
+# If you're using any AI/ML service credentials
+credentials.json
+*-credentials.json

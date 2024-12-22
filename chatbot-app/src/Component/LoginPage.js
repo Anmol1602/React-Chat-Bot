@@ -26,6 +26,7 @@ function LoginPage({ setUser }) {
 
             if (response.ok) {
                 const user = await response.json();
+                localStorage.setItem('user', JSON.stringify(user)); // Store user in localStorage
                 setUser(user); // Assuming a function `setUser` to store the logged-in user details
                 alert('Logged in successfully!');
                 setFormData({ email: '', password: '' }); // Clear form

@@ -1,11 +1,20 @@
-import React from "react";
+import React , { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../css/Navbar.css";
 import logo from "../assets/Logo.webp"; // Replace with your logo file path
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 function Navbar({ user, setUser }) {
+     
+    useEffect(() => {
+        const storedUser = localStorage.getItem("user");
+        if (storedUser) {
+            setUser(JSON.parse(storedUser));
+        }
+    }, [setUser]);
+
     const handleLogout = () => {
+        localStorage.removeItem("user");
         setUser(null); // Set user state to null to log out
         alert("Logged out successfully!");
     };
