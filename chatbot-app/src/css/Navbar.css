@@ -46,6 +46,11 @@
     text-transform: uppercase;
     padding: 10px 15px;
     transition: all 0.3s ease;
+    background: none;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar-link:hover {
