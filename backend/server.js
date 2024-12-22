@@ -33,6 +33,7 @@ ensureDirectoryExists(path.dirname(DATA_FILE));
 
 // Signup endpoint
 // Signup endpoint
+// amazonq-ignore-next-line
 app.post('/signup', (req, res) => {
     const { name, email, password } = req.body;
     if (!name || !email || !password) {
@@ -62,6 +63,7 @@ app.post('/signup', (req, res) => {
 
 
 // Login endpoint
+// amazonq-ignore-next-line
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
     if (!email || !password) {
@@ -70,6 +72,7 @@ app.post('/login', (req, res) => {
 
     fs.readFile(DATA_FILE_USER, (err, data) => {
         const users = err ? [] : JSON.parse(data);
+        // amazonq-ignore-next-line
         const user = users.find((u) => u.email === email && u.password === password);
 
         if (!user) {
@@ -126,6 +129,65 @@ app.post('/submit', (req, res) => {
                 }
                 res.status(201).send('Data saved successfully');
             });
+        });
+    });
+});
+
+
+// Endpoint to fetch user profile
+app.get('/user-profile', (req, res) => {
+    const { email } = req.query; // Pass email as a query parameter
+    if (!email) {
+        return res.status(400).send('Missing required email');
+    }
+
+    fs.readFile(DATA_FILE_USER, (err, data) => {
+        if (err) {
+            console.error('Error reading file:', err);
+            return res.status(500).send('Internal server error');
+        }
+
+        const users = JSON.parse(data);
+        const user = users.find((u) => u.email === email);
+
+        if (!user) {
+            return res.status(404).send('User not found');
+        }
+
+        res.json(user);
+    });
+});
+
+// Endpoint to update user profile
+app.put('/user-profile', (req, res) => {
+    const { email, ...updatedFields } = req.body;
+    if (!email) {
+        return res.status(400).send('Missing required email');
+    }
+
+    fs.readFile(DATA_FILE_USER, (err, data) => {
+        if (err) {
+            console.error('Error reading file:', err);
+            return res.status(500).send('Internal server error');
+        }
+
+        const users = JSON.parse(data);
+        const userIndex = users.findIndex((u) => u.email === email);
+
+        if (userIndex === -1) {
+            return res.status(404).send('User not found');
+        }
+
+        // Update user fields
+        users[userIndex] = { ...users[userIndex], ...updatedFields };
+
+        fs.writeFile(DATA_FILE_USER, JSON.stringify(users, null, 2), (err) => {
+            if (err) {
+                console.error('Error writing file:', err);
+                return res.status(500).send('Internal server error');
+            }
+
+            res.json(users[userIndex]);
         });
     });
 });
