@@ -1,3 +1,4 @@
+/* Navbar Styling */
 .navbar {
     display: flex;
     align-items: center;
@@ -24,13 +25,9 @@
 
 .navbar-links {
     display: flex;
-    /* Align links horizontally */
     align-items: center;
-    /* Center links vertically */
     justify-content: center;
-    /* Center within available space */
     flex-grow: 1;
-    /* Let it stretch to fill the space between logo and other items */
 }
 
 .navbar-list {
@@ -107,10 +104,12 @@
     align-items: center;
 }
 
+/* Navbar Hover Effects */
 .navbar-link:hover svg {
     color: #4caf50;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -120,19 +119,31 @@
 
     .navbar-links {
         width: 100%;
-        /* Take up the full width */
         justify-content: flex-start;
-        /* Align links to the left */
     }
 
     .navbar-list {
         flex-direction: column;
-        /* Stack links vertically */
         gap: 20px;
     }
 
     .navbar-link {
         font-size: 1rem;
         padding: 8px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-logo img {
+        width: 100px;
+    }
+
+    .navbar-link {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .navbar-item button.navbar-link {
+        font-size: 1rem;
     }
 }

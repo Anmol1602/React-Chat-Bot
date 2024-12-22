@@ -1,10 +1,8 @@
-/* List container to prevent overflow */
+/* List Container to Prevent Overflow */
 .link-list {
     padding: 10px;
     list-style-type: none;
- 
     max-width: 100%;
-    /* Ensure it doesn't go beyond parent container */
     overflow-x: auto;
     /* Allows horizontal scroll if necessary */
     white-space: normal;
@@ -32,10 +30,22 @@
     /* Prevent text overflow */
 }
 
-/* Optional: to add a scroll bar if content overflows */
+/* Optional: Add horizontal scroll bar if content overflows */
 .link-list-container {
     max-width: 100%;
     /* Ensure the container doesn't go beyond the parent */
     overflow-x: auto;
     /* Adds horizontal scrolling if the list is too wide */
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .link-list-item-url {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .link-list {
+        padding: 5px;
+    }
 }

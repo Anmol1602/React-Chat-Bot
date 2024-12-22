@@ -1,3 +1,4 @@
+/* Chatbot Container */
 .chatbot-container {
   max-width: fit-content;
   margin: 50px auto;
@@ -10,18 +11,13 @@
   /* Adjust height to fit the chatbot and buttons */
 }
 
-.bot-message-box {
+.bot-message-box,
+.user-message-box {
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
-.user-message-box {
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-/* Hide the chat button (the button that opens the chatbot) */
 .react-chatbot-kit-chat-input-container {
   display: none;
 }
@@ -76,10 +72,6 @@ body.dark {
   color: #ffffff;
 }
 
-body {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 /* App container to ensure footer stays at the bottom */
 .App {
   display: flex;
@@ -130,11 +122,47 @@ footer {
   padding-top: 10px;
 }
 
-/* Close chat button specific styling (inherits from .button) */
+/* Close chat button specific styling */
 .close-chat-button {
   background-color: #ff4d4d;
 }
 
 .close-chat-button:hover {
   background-color: #e60000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chatbot-container {
+    height: 60vh;
+    /* Reduce height for tablets */
+  }
+
+  .button {
+    width: 100%;
+    /* Make buttons full-width on smaller screens */
+  }
+
+  .chatbot-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatbot-container {
+    height: 50vh;
+    /* Further reduce height for mobile */
+  }
+
+  .button {
+    font-size: 12px;
+    /* Smaller button text */
+    padding: 8px;
+  }
+
+  .chatbot-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
 }

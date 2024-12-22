@@ -1,4 +1,4 @@
-/* TeamPage.css */
+/* Team Page */
 .team-page {
     padding: 20px;
     text-align: center;
@@ -26,4 +26,40 @@
 .team-member p {
     font-size: 16px;
     color: #555;
+}
+
+/* Responsive Design for Team Page */
+@media (max-width: 768px) {
+    .team-members {
+        flex-direction: column;
+        /* Stack team members vertically on tablets */
+        gap: 20px;
+    }
+
+    .team-member {
+        width: 80%;
+        /* Adjust width for mobile/tablet devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-members {
+        gap: 10px;
+        /* Reduce gap between team members on small screens */
+    }
+
+    .team-member {
+        width: 100%;
+        /* Make team member cards full width on mobile */
+    }
+
+    .team-member h2 {
+        font-size: 18px;
+        /* Adjust team member title size */
+    }
+
+    .team-member p {
+        font-size: 14px;
+        /* Smaller text size for descriptions */
+    }
 }

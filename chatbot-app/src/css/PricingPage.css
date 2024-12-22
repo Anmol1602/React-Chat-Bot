@@ -1,4 +1,4 @@
-/* PricingPage.css */
+/* Pricing Page Styling */
 .pricing-page {
     text-align: center;
     padding: 20px;
@@ -46,4 +46,49 @@ button {
     padding: 10px;
     border-radius: 5px;
     font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pricing-options {
+        flex-direction: column;
+        /* Stack pricing options vertically on tablets */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .pricing-option {
+        width: 80%;
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    button {
+        width: 80%;
+    }
+
+    .hover-message {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-option {
+        width: 100%;
+        padding: 12px;
+    }
+
+    input,
+    button {
+        width: 100%;
+        /* Full-width for form inputs and buttons */
+    }
+
+    .hover-message {
+        font-size: 11px;
+    }
 }

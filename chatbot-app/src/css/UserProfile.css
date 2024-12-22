@@ -41,5 +41,41 @@ button:hover {
     background: #49b283;
 }
 
+/* Responsive Design for User Profile */
+@media (max-width: 768px) {
+    .user-profile {
+        width: 80%;
+        /* Adjust the width for tablets */
+        margin: 20px auto;
+        /* Reduce margin for better fit */
+        padding: 15px;
+        /* Reduce padding on smaller screens */
+    }
 
+    button {
+        width: 100%;
+        /* Make buttons full width for tablets */
+    }
+}
 
+@media (max-width: 480px) {
+    .user-profile {
+        width: 90%;
+        /* Adjust the width for mobile */
+        padding: 10px;
+        /* Further reduce padding for mobile */
+    }
+
+    button {
+        font-size: 14px;
+        /* Smaller font size for buttons on mobile */
+        padding: 12px;
+        width: 100%;
+        /* Full width for buttons */
+    }
+
+    .profile-form input {
+        font-size: 14px;
+        /* Smaller input fields */
+    }
+}

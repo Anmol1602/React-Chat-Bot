@@ -1,13 +1,55 @@
-learning-options-container {
+/* Learning Options Container */
+.learning-options-container {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+    gap: 10px;
+    /* Optional, if you want some space between items */
+    justify-content: center;
+    /* Centers items on smaller screens */
 }
 
+/* Learning Option Button */
 .learning-option-button {
     padding: 0.5rem;
     border-radius: 25px;
     background: transparent;
     border: 1px solid green;
     margin: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    /* Default font size for buttons */
 }
+
+/* Hover effect for learning option button */
+.learning-option-button:hover {
+    background-color: #f1f1f1;
+}
+
+/* Optionally, you can add more styles for different states of the buttons */
+.learning-option-button:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    /* On smaller screens, change the layout to be more stacked */
+    .learning-options-container {
+        justify-content: flex-start;
+        /* Align to the left on mobile */
+    }
+
+    /* Make buttons larger and more readable on mobile */
+    .learning-option-button {
+        padding: 1rem;
+        font-size: 1.2rem;
+        /* Slightly larger font size */
+        width: 100%;
+        /* Full-width buttons on mobile for easier tapping */
+    }
+}
+
+/* On even smaller screens (

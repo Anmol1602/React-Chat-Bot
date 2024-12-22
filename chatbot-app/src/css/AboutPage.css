@@ -18,3 +18,46 @@
     color: #555;
     margin-bottom: 15px;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .about-page {
+        padding: 15px;
+    }
+
+    .about-page h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-page p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-page {
+        padding: 15px;
+    }
+
+    .about-page h1 {
+        font-size: 1.6rem;
+    }
+
+    .about-page p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-page {
+        padding: 10px;
+    }
+
+    .about-page h1 {
+        font-size: 1.4rem;
+    }
+
+    .about-page p {
+        font-size: 0.85rem;
+    }
+}
