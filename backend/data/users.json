@@ -21,5 +21,14 @@
     "address": "A-1/126 Mansarover Colony Moradabad Uttar Pradesh",
     "subscription": "year",
     "subscriptionExpiry": "2025-12-25T07:49:45.837Z"
+  },
+  {
+    "name": "Anmol Kumar Varshney",
+    "email": "anmol16072002@gmail.com",
+    "password": "Anmol234$",
+    "subscription": "year",
+    "subscriptionExpiry": "2025-12-25T08:38:37.988Z",
+    "phone": "6395930109",
+    "address": "Ravindra Bhawan IIT Roorkee Uttrakhand"
   }
 ]
