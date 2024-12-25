@@ -16,10 +16,15 @@ function Navbar({ user, setUser }) {
     useEffect(() => {
         const storedUser = localStorage.getItem("user");
         if (storedUser) {
-            setUser(JSON.parse(storedUser));
+            try {
+                setUser(JSON.parse(storedUser));
+            } catch (error) {
+                console.error("Failed to parse user from localStorage:", error);
+                localStorage.removeItem("user"); // Clear invalid data
+            }
         }
     }, [setUser]);
-
+    
     const handleLogout = () => {
         localStorage.removeItem("user");
         setUser(null); // Set user state to null to log out
